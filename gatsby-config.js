@@ -4,14 +4,21 @@ module.exports = {
     title: "powerscore",
   },
   plugins: [
-    "gatsby-plugin-sass",
-    "gatsby-plugin-image",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-source-drupal`,
       options: {
-        trackingId: "",
+        baseUrl: `https://dev.reddesignlab.com/ps-drupal9/web/`,
+        apiBase: `jsonapi`, // optional, defaults to `jsonapi`
       },
     },
+    "gatsby-plugin-sass",
+    "gatsby-plugin-image",
+    // {
+    //   resolve: "gatsby-plugin-google-analytics",
+    //   options: {
+    //     trackingId: "",
+    //   },
+    // },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
